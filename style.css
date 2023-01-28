@@ -1,0 +1,162 @@
+:root{
+
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-ery-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+    --ff: 'Red Hat Display', sans-serif;
+    --fw-5:500;
+    --fw-7:700;
+    --fw-9:900;
+}
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--clr-pale-blue);
+    color: var(--clr-desaturated-blue);
+    font-family: var(--ff);
+    font-weight: var(--fw-5);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+
+  }
+.canteyner{
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1rem;
+    border:1px ;
+    overflow: hidden;
+    width: 375px;
+}
+
+.card__content{
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+.card__content>p{
+    font-size: 20px;
+}
+
+
+h1{
+    font-size: 24px;
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-9);
+}
+.card__list{
+    display: flex;
+    background-color: var(--clr-ery-pale-blue);
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  border-radius: 1rem;
+}
+.card__plan{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    align-content: flex-start;
+    flex-grow: 1;
+}
+.card__plan p{
+    color: var(--clr-dark-blue);
+    font-weight: var(--fw-9);
+}
+ a{
+    font-weight: var(--fw-7);
+}
+a:hover{
+    text-decoration: none;
+}
+.card__btns{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.card__btn{
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 0;
+    font-weight: var(--fw-9);
+    background: transparent;
+}
+.card__btn:hover{
+    cursor: pointer;
+}
+.card__btn--one{
+    background-color:var(--clr-bright-blue) ;
+   color: white;
+   box-shadow: 0 15px 15px var(--clr-ery-pale-blue);
+}
+
+@media (min-width:800px) {
+    body{
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+    }
+   
+}
